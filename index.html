@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Job Queue Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🖨️ Print Job Queue Simulation</h1>
+        
+        <div class="controls">
+            <input type="number" id="jobId" placeholder="Job ID" value="101">
+            <input type="number" id="pages" placeholder="Pages" value="5">
+            <select id="priority">
+                <option value="HIGH">HIGH</option>
+                <option value="NORMAL">NORMAL</option>
+                <option value="LOW">LOW</option>
+            </select>
+            <button onclick="addJob()">➕ Add Job</button>
+            <button onclick="printJob()">🖨️ Print Next</button>
+            <button onclick="resetQueue()">🔄 Reset</button>
+        </div>
+        
+        <div class="queue-visual">
+            <h3>Print Queue (<span id="queueSize">0</span>/10)</h3>
+            <div id="queueDisplay" class="queue"></div>
+        </div>
+        
+        <div class="stats">
+            <p>Total Jobs Printed: <span id="printedCount">0</span></p>
+            <p>Status: <span id="status">Ready</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
